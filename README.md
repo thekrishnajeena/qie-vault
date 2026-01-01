@@ -35,14 +35,11 @@ Unlike traditional systems, QIE Vault uses non-transferable (soulbound) identity
 * **Blockchain:** QIE Chain
 * **Frontend:** HTML, CSS (minimalist, Apple-inspired design), JavaScript (Ethers.js for blockchain interaction)
 * **Decentralized Storage:** Pinata (for IPFS pinning)
-* **Development Environment:** Hardhat (or similar for local testing/deployment)
 
 ## 🏗️ Setup and Installation
 
 ### Prerequisites
 
-* Node.js (LTS recommended)
-* npm or yarn
 * MetaMask browser extension
 * Access to QIE Chain RPC endpoint (e.g., for deployment and interaction)
 * Pinata API Key & Secret (for IPFS uploads)
@@ -51,7 +48,7 @@ Unlike traditional systems, QIE Vault uses non-transferable (soulbound) identity
 
 1.  **Clone the repository:**
     ```bash
-    git clone [your-repo-link]
+    git clone [https://github.com/thekrishnajeena/qie-vault.git]
     cd qie-vault
     ```
 2.  **Install dependencies:**
@@ -95,16 +92,6 @@ Unlike traditional systems, QIE Vault uses non-transferable (soulbound) identity
     * Go to the "Vault Access" tab.
     * Enter the `Document ID` and click "Request Access." The document (from IPFS) should load in the iframe.
     * Switch to a wallet **without** access and try again. Access should be denied.
-
-## ✅ Testing (Manual is Recommended for Hackathon Demo)
-
-For a hackathon, showcasing the full user flow manually in a live demo is the most impactful. However, for internal development, you can use Hardhat or Foundry to write unit tests for your smart contract functions, especially focusing on:
-
-* `createDocument` (success, failure on existing ID)
-* `grantAccess` (Exclusive vs. Broadcast mode, correct key transfers/mints)
-* `revokeAccess` (burning correct token)
-* `canAccess` (correctly reflecting access status)
-* `safeTransferFrom` (ensuring non-transferability by users)
 
 ## 🤝 Contribution
 
